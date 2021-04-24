@@ -307,7 +307,7 @@ def main():
         oof_train = np.zeros((len(all_train_examples), len(k_fold_processor.get_labels())))
         oof_test = np.zeros((len(predict_examples), len(k_fold_processor.get_labels())))
         all_train_labels = [example.label for example in all_train_examples]
-        stratified_folder = StratifiedKFold(n_splits=args.k_fold, random_state=args.seed, shuffle=False)
+        stratified_folder = StratifiedKFold(n_splits=args.k_fold, random_state=args.seed, shuffle=True)
         for fold_num, (train_idx, dev_idx) in enumerate(stratified_folder.split(all_train_examples, all_train_labels), start=1):
             logging.info('start fold ' + str(fold_num) + ' training...')
             train_examples, dev_examples = all_train_examples[train_idx], all_train_examples[dev_idx]

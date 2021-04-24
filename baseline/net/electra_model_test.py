@@ -1,5 +1,5 @@
 from transformers import ElectraForSequenceClassification, ElectraModel
-from transformers.modeling_electra import ElectraClassificationHead, ElectraPreTrainedModel
+from transformers.models.electra.modeling_electra import ElectraClassificationHead, ElectraPreTrainedModel
 from torch.nn import CrossEntropyLoss, MSELoss
 class ElectraForSequenceClassification(ElectraPreTrainedModel):
     def __init__(self, config, args):

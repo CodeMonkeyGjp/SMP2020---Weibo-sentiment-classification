@@ -1,5 +1,5 @@
 from transformers import BertPreTrainedModel, BertModel
-from transformers.modeling_bert import BertLayerNorm, BertEmbeddings, BertEncoder, BertPooler
+from transformers.models.bert.modeling_bert import BertEmbeddings, BertEncoder, BertPooler
 from transformers.activations import gelu
 from torch import nn
 import torch
